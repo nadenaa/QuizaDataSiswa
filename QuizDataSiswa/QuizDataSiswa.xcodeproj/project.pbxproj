@@ -19,6 +19,7 @@
 		D38426751FA18F7200CC4E6B /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38426741FA18F7200CC4E6B /* NoteTableViewController.swift */; };
 		D38426771FA18FEB00CC4E6B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38426761FA18FEB00CC4E6B /* AddViewController.swift */; };
 		D38426791FA1998000CC4E6B /* serahTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38426781FA1998000CC4E6B /* serahTableViewCell.swift */; };
+		D3CB63511FA1C6BE00A9C2D4 /* dataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CB63501FA1C6BE00A9C2D4 /* dataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D38426741FA18F7200CC4E6B /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 		D38426761FA18FEB00CC4E6B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		D38426781FA1998000CC4E6B /* serahTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serahTableViewCell.swift; sourceTree = "<group>"; };
+		D3CB63501FA1C6BE00A9C2D4 /* dataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				D38426741FA18F7200CC4E6B /* NoteTableViewController.swift */,
 				D38426761FA18FEB00CC4E6B /* AddViewController.swift */,
 				D38426781FA1998000CC4E6B /* serahTableViewCell.swift */,
+				D3CB63501FA1C6BE00A9C2D4 /* dataViewController.swift */,
 			);
 			path = QuizDataSiswa;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				D38426771FA18FEB00CC4E6B /* AddViewController.swift in Sources */,
 				D38426441FA1848C00CC4E6B /* ViewController.swift in Sources */,
 				D38426751FA18F7200CC4E6B /* NoteTableViewController.swift in Sources */,
+				D3CB63511FA1C6BE00A9C2D4 /* dataViewController.swift in Sources */,
 				D38426791FA1998000CC4E6B /* serahTableViewCell.swift in Sources */,
 				D38426421FA1848C00CC4E6B /* AppDelegate.swift in Sources */,
 				D384264A1FA1848C00CC4E6B /* QuizDataSiswa.xcdatamodeld in Sources */,

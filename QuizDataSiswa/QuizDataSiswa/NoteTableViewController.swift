@@ -11,7 +11,12 @@ import UIKit
 class NoteTableViewController: UITableViewController {
     
     var tasks : [Task] = [] //Task ini di panggil dari entiti yang sudah di buat sebelumnya
-    
+    var namaSelected:String?
+    var emailSelected:String?
+    var passwordSelected:String?
+    var schoolSelected:String?
+    var classSelected:String?
+    var ageSelected:String?
     //dekarasikan context object untuk persistnet container
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -61,8 +66,8 @@ class NoteTableViewController: UITableViewController {
             cell.labelEmail.text = myDataTask1
         }
      
-        if let myDataTask3 = dataTask.yourschool {
-            cell.labelSchool.text = myDataTask3
+        if let myDataTask2 = dataTask.yourschool {
+            cell.labelSchool.text = myDataTask2
         }
     
         
@@ -106,7 +111,51 @@ class NoteTableViewController: UITableViewController {
             }
         }
         //load data lagi
+        
+       
+        
+        
+        
+        
+        
         tableView.reloadData()
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        //mengecek data yang dikirim
+        print("Row \(indexPath.row)selected")
+        
+        let dataTask = tasks[indexPath.row]
+        //memasukan data ke variable namaSelected dan image selected ke masing masing variable nya
+        namaSelected = dataTask.username
+        emailSelected = dataTask.email
+        passwordSelected = dataTask.password
+        schoolSelected = dataTask.yourschool
+        classSelected = dataTask.yourclass
+        ageSelected = dataTask.yourage
+        //memamnggil segue passDataDetail
+        performSegue(withIdentifier: "passData", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //mengecek apakah segue nya ada atau  tidak
+        if segue.identifier == "passData"{
+            //kondisi ketika segue nya ada
+            //mengirimkan data ke detailViewController
+            let kirimData = segue.destination as! dataViewController
+            //mengirimkan data ke masing2 variable
+            //mengirimkan nama wisata
+            kirimData.passNama = namaSelected
+            //mengirimkan data gambar wisata
+            kirimData.passEmail = emailSelected
+            kirimData.passPassword = passwordSelected
+            kirimData.passSchool = schoolSelected
+            kirimData.passClass = classSelected
+            kirimData.passAge = ageSelected
+            
+            
+            
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -153,5 +202,5 @@ class NoteTableViewController: UITableViewController {
     }
     */
 
-}
+
 }
